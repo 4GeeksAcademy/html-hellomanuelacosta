@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  color: #111;
+  background-color: #f3f3f5;
+  line-height: 1.6;
+}
+
+/* Barra superior */
+.cabecera {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f3f3f5;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #111;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+nav a {
+  color: #111;
+  text-decoration: none;
+}
+
+/* Botones */
+.boton-oscuro,
+.boton-claro,
+.volver {
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.boton-oscuro,
+.volver {
+  background-color: #111;
+  color: #fff;
+}
+
+.boton-claro {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  color: #111;
+}
+
+/* Bienvenida: dos columnas */
+.hero {
+  min-height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin: 0 3rem;
+  padding: 3rem;
+  background-color: #e9eaee;
+  border-radius: 24px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.hero h1 span {
+  display: block;
+  color: #8a8f98;
+}
+
+.hero p {
+  max-width: 460px;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cifras {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.cifras strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.cifras span {
+  color: #555;
+}
+
+.hero-imagen {
+  position: relative;
+}
+
+.hero-imagen img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Tarjeta sobre la imagen */
+.tarjeta {
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: rgba(20, 20, 20, 0.85);
+  color: #fff;
+  text-decoration: none;
+}
+
+.tarjeta p {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.tarjeta .pequeno {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.tarjeta-titulo {
+  font-size: 1.2rem;
+}
+
+.flecha {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #111;
+  font-size: 1.5rem;
+}
+
+/* Franja de ciudades */
+.franja {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 2.5rem 3rem;
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  color: #555;
+}
+
+/* Secciones de contenido */
+.seccion {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.seccion h2 {
+  font-family: Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+.seccion p {
+  max-width: 600px;
+}
+
+/* Celulares */
+@media (max-width: 800px) {
+  .cabecera {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  nav {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    margin: 0 1rem 2rem;
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-imagen img {
+    height: 300px;
+  }
+}
